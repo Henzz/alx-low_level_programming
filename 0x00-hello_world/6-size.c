@@ -14,10 +14,10 @@ int main(void)
 	char charType;
 
 	// Sizeof
-	printf("Size of a char: %ld bytes\n", sizeof(charType));
-	printf("Size of an Int: %ld bytes\n", sizeof(integerType));
-	printf("Size of a long int: %ld bytes\n", sizeof(longIntType));
-	printf("Size of a long long int: %ld bytes\n", sizeof(longLongIntType));
-	printf("Size of a float: %ld bytes\n", sizeof(floatType));
+	printf("Size of a char: %ld byte(s)\n", sizeof(charType));
+	printf("Size of an Int: %ld byte(s)\n", sizeof(integerType));
+	printf("Size of a long int: %ld byte(s)\n", sizeof(longIntType));
+	printf("Size of a long long int: %ld byte(s)\n", sizeof(longLongIntType));
+	printf("Size of a float: %ld byte(s)\n", sizeof(floatType));
 	return (0);
 }
