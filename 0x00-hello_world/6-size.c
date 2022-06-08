@@ -4,6 +4,7 @@
 /**
  * main - Entry point
  *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -13,7 +14,6 @@ int main(void)
 	long long int longLongIntType;
 	char charType;
 
-	// Sizeof
 	printf("Size of a char: %ld byte(s)\n", sizeof(charType));
 	printf("Size of an int: %ld byte(s)\n", sizeof(integerType));
 	printf("Size of a long int: %ld byte(s)\n", sizeof(longIntType));
