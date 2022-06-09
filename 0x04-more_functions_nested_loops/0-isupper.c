@@ -1,6 +1,6 @@
 /*#!/bin/bash*/
 #include "main.h"
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * _isupper - checks if it's upper case or lowercase
@@ -32,8 +32,8 @@ int main(void)
 	char c;
 
 	c = 'A';
-	printf("%c: %d\n", c, _isupper(c));
+	write("%c: %d\n", c, _isupper(c));
 	c = 'a';
-	printf("%c: %d\n", c, _isupper(c));
+	write("%c: %d\n", c, _isupper(c));
 	return (0);
 }
