@@ -11,5 +11,5 @@ int main(void)
 	char msg[] = "_putchar\n";
 
 	fwrite(msg, sizeof(msg) - 1, 1, stdout);
-	return (1);
+	return (0);
 }
