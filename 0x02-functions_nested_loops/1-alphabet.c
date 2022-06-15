@@ -10,8 +10,11 @@ void print_alphabet(void)
 {
 	char a;
 
-	a = 'a';
-	write(1, &a, 1);
+	for (a = 'a'; a <= 'z'; a++)
+	{
+		putchar(a);
+	};
+	putchar('\n');
 }
 /**
  * main - Entry point

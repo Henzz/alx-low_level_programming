@@ -23,8 +23,14 @@ int main(void)
 	int n;
 
 	n = 402;
-	printf("n=%d\n", n);
+	putchar('n');
+	putchar('=');
+	putchar(n/10 + '0');
+	putchar('\n');
 	reset_to_98(&n);
-	printf("n=%d\n", n);
+	putchar('n');
+	putchar('=');
+	putchar(n%10 + '0');
+	putchar('\n');
 	return (0);
 }
