@@ -8,7 +8,7 @@
  *
  * Return: nothing
  */
-void print_alph(void)
+void print_alphabet(void)
 {
 	char a;
 
@@ -23,10 +23,9 @@ void print_alph(void)
  * main - Entry point
  *
  * Return: Always 0.
- *
  */
 int main(void)
 {
-	print_alph();
+	print_alphabet();
 	return (0);
 }
