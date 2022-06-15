@@ -8,7 +8,7 @@
  *
  * Return: nothing
  */
-void print_alphabet(void)
+void print_alph(void)
 {
 	char a;
 
@@ -18,6 +18,7 @@ void print_alphabet(void)
 	};
 	putchar('\n');
 }
+
 /**
  * main - Entry point
  *
@@ -26,6 +27,6 @@ void print_alphabet(void)
  */
 int main(void)
 {
-	print_alphabet();
+	print_alph();
 	return (0);
 }
