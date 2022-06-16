@@ -1,7 +1,9 @@
 /*#!/bin/bash*/
 #include <stdio.h>
 
-void print_alphabet(void);
+/*Function declaration*/
+void print_alphabet();
+
 /**
  * print_alphabet - Print alphabet
  *
