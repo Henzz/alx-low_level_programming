@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /* Function declaration */
-void print_alphabet(void);
+void print_alphabet();
 
 /**
  * main - Entry point
@@ -20,7 +20,7 @@ int main(void)
  *
  * Return: nothing.
  */
-void print_alphabet(void)
+void print_alphabet()
 {
 	char a;
 
