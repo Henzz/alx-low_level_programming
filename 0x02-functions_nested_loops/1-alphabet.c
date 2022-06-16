@@ -1,12 +1,12 @@
 /* #!/bin/bash */
 #include <stdio.h>
 
-void print_alphabet(void);
 /**
  * main - Entry point
  *
  * Return: Always 0.
  */
+void print_alphabet(void);
 int main(void)
 {
 	print_alphabet();
