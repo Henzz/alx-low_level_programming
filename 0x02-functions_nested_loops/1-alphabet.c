@@ -1,7 +1,7 @@
 /* #!/bin/bash */
 #include <stdio.h>
 
-void print_alphabet(void);
+int _putchar(char a);
 /** 
  * print_alphabet - Print alphabet
  *
@@ -13,7 +13,7 @@ void print_alphabet(void)
 
 	for (a = 'a'; a <= 'z'; a++)
 	{
-		putchar(a);
+		_putchar(a);
 	};
-	putchar('\n');
+	_putchar('\n');
 }
