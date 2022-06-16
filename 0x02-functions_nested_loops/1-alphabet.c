@@ -2,7 +2,18 @@
 #include <stdio.h>
 
 /*Function declaration*/
-void print_alphabet();
+void print_alphabet(void);
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0.
+ */
+int main()
+{
+	print_alphabet();
+	return (0);
+}
 
 /**
  * print_alphabet - Print alphabet
@@ -18,16 +29,4 @@ void print_alphabet(void)
 		putchar(a);
 	};
 	putchar('\n');
-	return;
-}
-
-/**
- * main - Entry point
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	print_alphabet();
-	return (0);
 }
