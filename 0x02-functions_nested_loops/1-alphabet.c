@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int _putchar(char a);
-/** 
+/**
  * print_alphabet - Print alphabet
  *
  * Return: nothing.
