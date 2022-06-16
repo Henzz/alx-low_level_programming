@@ -1,6 +1,7 @@
 /*#!/bin/bash*/
 #include <stdio.h>
 
+void print_alphabet(void);
 /**
  * print_alphabet - Print alphabet
  *
@@ -15,6 +16,7 @@ void print_alphabet(void)
 		putchar(a);
 	};
 	putchar('\n');
+	return;
 }
 
 /**
