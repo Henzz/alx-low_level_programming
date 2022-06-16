@@ -1,9 +1,7 @@
 /* #!/bin/bash */
 #include <stdio.h>
 
-/* Function declaration */
-void print_alphabet();
-
+void print_alphabet(void);
 /**
  * main - Entry point
  *
@@ -20,7 +18,7 @@ int main(void)
  *
  * Return: nothing.
  */
-void print_alphabet()
+void print_alphabet(void)
 {
 	char a;
 
