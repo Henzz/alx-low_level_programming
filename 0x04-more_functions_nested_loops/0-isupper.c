@@ -1,5 +1,5 @@
 /*#!/bin/bash*/
-#include "main.h"
+#include <stdio.h>
 #include <unistd.h>
 
 /**
@@ -9,31 +9,16 @@
  *
  * Return: 0 and 1.
  */
-int _isupper(int c)
+int _isupper(char c)
 {
 	/* c - varibale */
 	if (c >= 'A' && c <= 'Z')
 	{
 		return (1);
 	}
-	else if (c >= 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
 		return (0);
 	}
-}
-
-/**
- * main - check the code.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	char c;
-
-	c = 'A';
-	write("%c: %d\n", c, _isupper(c));
-	c = 'a';
-	write("%c: %d\n", c, _isupper(c));
 	return (0);
 }
