@@ -9,6 +9,7 @@
  *
  * Return: 0 and 1.
  */
+int _isupper(char c);
 int _isupper(char c)
 {
 	/* c - varibale */
