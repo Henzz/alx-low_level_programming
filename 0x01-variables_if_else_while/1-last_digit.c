@@ -4,7 +4,7 @@
 #include <time.h>
 
 /**
- * main - Entry point
+ * main - get last digit of number
  *
  * Return: Always 0 (Success)
  */

@@ -4,7 +4,7 @@
 #include <sys/syscall.h>
 
 /**
- * main - Entry point
+ * main - Print alphabet in lowercase
  *
  * Return: Always 0 (Success)
  */

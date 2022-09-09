@@ -4,7 +4,7 @@
 #include <time.h>
 
 /**
- * main - Entry point
+ * main - Check number if +ve or -ve or zero
  *
  * Return: Always 0 (Success)
  */
