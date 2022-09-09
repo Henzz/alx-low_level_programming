@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Print numbers from 0 - 9
  *
  * Return: Always 0 (Success)
  */

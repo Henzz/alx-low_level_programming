@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Print numbers of base 16 in lowercase(0-9a-f)
  *
  * Return: Always 0 (Success)
  */
