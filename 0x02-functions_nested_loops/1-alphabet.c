@@ -1,11 +1,10 @@
 /* #!/bin/bash */
-#include <stdio.h>
 #include "main.h"
 
 /**
  * print_alphabet - prints lowercase alphabet letters
  *
- * Return: Always 0 (Success).
+ * Return: Nothing.
  */
 void print_alphabet(void)
 {
