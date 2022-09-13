@@ -1,15 +1,15 @@
-/*#!/bin/bash*/
+/* #!/bin/bash */
 #include <stdio.h>
+#include <unistd.h>
 
 /**
- * main - Entry point
+ * main - writes the character _putchar
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char msg[] = "_putchar\n";
+	write(1, "_putchar\n", 10);
 
-	fwrite(msg, sizeof(msg) - 1, 1, stdout);
 	return (0);
 }
