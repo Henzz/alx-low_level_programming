@@ -1,7 +1,7 @@
 /* #!/bin/bash */
 #include <stdio.h>
+#include "main.h"
 
-int _putchar(char a);
 /**
  * print_alphabet - prints lowercase alphabet letters
  *
