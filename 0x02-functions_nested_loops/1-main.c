@@ -1,10 +1,8 @@
 #include "main.h"
 
-void print_alphabet(void);
+int print_alphabet(void);
 /**
- * main - check code.
- *
- * print_alphabet - print alphabet letter in order
+ * main - check the code
  *
  * Return: Always 0.
  */

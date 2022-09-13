@@ -3,11 +3,11 @@
 
 int _putchar(char a);
 /**
- * print_alphabet - prints lowercase alphabet letters
+ * print_alphabet - Print alphabet
  *
- * Return: Always 0 (Success).
+ * Return: nothing.
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
 	char a;
 
@@ -16,5 +16,4 @@ int print_alphabet(void)
 		_putchar(a);
 	};
 	_putchar('\n');
-	return (0);
 }

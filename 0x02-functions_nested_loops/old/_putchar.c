@@ -1,8 +1,8 @@
 /* /bin/bash */
-#include <unistd.h>
+#include <stdio.h>
 
 /**
- * _putchar - writes the character a to stdout
+ * _putchar - to print given value
  *
  * Description: print character
  *
@@ -12,5 +12,6 @@
  */
 int _putchar(char a)
 {
-	return (write(1, &a, 1));
+	putchar(a);
+	return (0);
 }
