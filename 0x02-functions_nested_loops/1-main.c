@@ -8,11 +8,11 @@
  */
 int main(void)
 {
-	int r;
+	jack_bauer();
+	/*int r;
 
 	r = add(89, 9);
 	printf("%d\n", r);
-	/*jack_bauer();
 	print_last_digit(98);
 	print_last_digit(0);
 	r = print_last_digit(-1024);
