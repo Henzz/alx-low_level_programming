@@ -8,8 +8,9 @@
  */
 int main(void)
 {
-	jack_bauer();
-	/*int r;
+	times_table();
+	/*jack_bauer();
+	int r;
 
 	r = add(89, 9);
 	printf("%d\n", r);
