@@ -8,8 +8,9 @@
  */
 int main(void)
 {
-	print_most_numbers();
-	/*print_numbers();
+	more_numbers();
+	/*print_most_numbers();
+	print_numbers();
 	printf("%d\n", mul(98, 4096));
 	printf("%d\n", mul(-402, 4096));
 	char c;
