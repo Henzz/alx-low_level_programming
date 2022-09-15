@@ -1,4 +1,6 @@
-#include <ctype.h>
+/*#!/bin/bash*/
+#include <stdio.h>
+#include <unistd.h>
 
 /**
  * _isupper - checks if it's upper case or lowercase
@@ -9,12 +11,14 @@
 
 int _isupper(char c)
 {
-	if (isupper(c) > 0)
+	/* c - varibale */
+	if (c >= 'A' && c <= 'Z')
 	{
 		return (1);
 	}
-	else
+	if (c >= 'a' && c <= 'z')
 	{
 		return (0);
 	}
+	return (0);
 }
