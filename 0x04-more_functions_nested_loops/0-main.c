@@ -8,9 +8,10 @@
  */
 int main(void)
 {
-	printf("%d\n", mul(98, 4096));
+	print_numbers();
+	/*printf("%d\n", mul(98, 4096));
 	printf("%d\n", mul(-402, 4096));
-	/*char c;
+	char c;
 
 	c = '0';
 	printf("%c: %d\n", c, _isdigit(c));
