@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include "main.h"
 
 /**
  * main - prints numbers from 1 to 100, followed by a new line
@@ -16,17 +15,17 @@ int main(void)
 
 	for (n = 1; n <= 100; n++)
 	{
-		if ((n % 3) == 0)
+		if (((n % 3) == 0) && ((n % 5) == 0))
+		{
+			write(1, "FizzBuzz", 8);
+		}
+		else if ((n % 3) == 0)
 		{
 			write(1, "Fizz", 4);
 		}
 		else if ((n % 5) == 0)
 		{
 			write(1, "Buzz", 4);
-		}
-		else if (((n % 3) == 0) && ((n % 5) == 0))
-		{
-			write(1, "FizzBuzz", 8);
 		}
 		else
 		{
