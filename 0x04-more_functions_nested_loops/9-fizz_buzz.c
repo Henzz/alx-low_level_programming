@@ -42,7 +42,10 @@ int main(void)
 				write(1, &x, 1);
 			}
 		}
-		write(1, " ", 1);
+		if (n < 100)
+		{
+			write(1, " ", 1);
+		}
 	}
 	write(1, "\n", 2);
 	return (0);
