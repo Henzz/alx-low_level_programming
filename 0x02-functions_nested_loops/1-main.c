@@ -8,8 +8,13 @@
  */
 int main(void)
 {
-	times_table();
-	/*jack_bauer();
+	print_to_98(0);
+	print_to_98(98);
+	print_to_98(111);
+	print_to_98(81);
+	print_to_98(-10);
+	/*times_table();
+	jack_bauer();
 	int r;
 
 	r = add(89, 9);
