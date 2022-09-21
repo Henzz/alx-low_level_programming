@@ -1,7 +1,7 @@
 #include <string.h>
 
 /**
- * *_strncat - concatenates two strings from given n bytes
+ * _strncat - concatenates two strings from given n bytes
  * @dest: value of first string
  * @src: value of second string
  * @n: value of n bytes
