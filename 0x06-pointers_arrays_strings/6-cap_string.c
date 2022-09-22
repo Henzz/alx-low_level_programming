@@ -26,7 +26,7 @@ char *cap_string(char *ch)
 	separators[10] = '{';
 	separators[11] = '}';
 	length = strlen(ch);
-	separators_size = sizeof(separators) - 1;
+	separators_size = sizeof(separators);
 	for (i = 0; i < length; i++)
 	{
 		if (i == 0)
