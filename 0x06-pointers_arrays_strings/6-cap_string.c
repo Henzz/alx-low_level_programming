@@ -1,6 +1,7 @@
 #include "main.h"
 #include <ctype.h>
 #include <string.h>
+#include <stdio.h>
 
 /**
  * cap_string - capitalizes all words of a string
@@ -27,7 +28,7 @@ char *cap_string(char *ch)
 	separators[11] = '}';
 	length = strlen(ch);
 	separators_size = sizeof(separators);
-	for (i = 0; i < length; i++)
+	for (i = 0; i <= length; i++)
 	{
 		for (j = 0; j < separators_size; j++)
 		{
