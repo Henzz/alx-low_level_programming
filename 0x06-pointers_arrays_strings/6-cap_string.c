@@ -29,21 +29,21 @@ char *cap_string(char *ch)
 	separators_size = sizeof(separators);
 	for (i = 0; i < length; i++)
 	{
-		if (i == 0)
-		{
-			*(ch + i) = toupper(ch[i]);
-		}
 		for (j = 0; j < separators_size; j++)
 		{
+			if (i == 0)
+			{
+				*(ch + i) = toupper(ch[i]);
+			}
 			if (ch[i] == separators[j])
 			{
 				*(ch + (i + 1)) = toupper(ch[i + 1]);
 			}
-		}
-		if (ch[i] == '\t')
-		{
-			*(ch + (i)) = ' ';
-			*(ch + (i + 1)) = toupper(ch[i + 1]);
+			if (ch[i] == '\t')
+			{
+				*(ch + (i)) = ' ';
+				*(ch + (i + 1)) = toupper(ch[i + 1]);
+			}
 		}
 	}
 	return (ch);
