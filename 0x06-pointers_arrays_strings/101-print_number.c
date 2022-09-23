@@ -20,7 +20,7 @@ void print_number(int n)
 	{
 		_putchar(45);
 	}
-	if (counter == 1 || counter == 0)
+	if (counter == 0 || counter == 1)
 	{
 		_putchar(abs(n % 10) + '0');
 	}
