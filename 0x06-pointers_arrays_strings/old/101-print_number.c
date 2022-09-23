@@ -8,35 +8,36 @@
  */
 void print_number(int n)
 {
-	int y, z, counter = 0;
+	int y, z;
 
-	y = n;
-	while (y != 0)
-	{
-		y = y / 10;
-		counter++;
-	}
-	if (n < 0)
-	{
-		_putchar(45);
-	}
-	if (counter == 1 || counter == 0)
+	if (n < 10 && n > -1)
 	{
 		_putchar(abs(n % 10) + '0');
 	}
-	if (counter == 2)
+	else if (n < 0 && n > -10)
+	{
+		_putchar(45);
+		_putchar(abs(n % 10) + '0');
+	}
+	else if (n < -9 && n > -100)
+	{
+		_putchar(45);
+		_putchar(abs(n / 10) + '0');
+		_putchar(abs(n % 10) + '0');
+	}
+	else if (n > 9 && n < 100)
 	{
 		_putchar(abs(n / 10) + '0');
 		_putchar(abs(n % 10) + '0');
 	}
-	if (counter == 3)
+	else if (n > 99 && n < 1000)
 	{
 		y = abs(n / 10);
 		_putchar(abs(y / 10) + '0');
 		_putchar(abs(y % 10) + '0');
 		_putchar(abs(n % 10) + '0');
 	}
-	if (counter == 4)
+	else if (n > 999)
 	{
 		y = abs(n / 10);
 		z = abs(y / 10);
