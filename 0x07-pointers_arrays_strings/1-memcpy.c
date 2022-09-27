@@ -2,9 +2,9 @@
 
 /**
  * _memcpy - a function that copies memory area
- * @dest: 
- * @src: pointer to copy from
- * @n: nmber
+ * @dest: the address of destination char
+ * @src: the address of source char
+ * @n: size of the memory to copy
  *
  * Return: copied char.
  */
