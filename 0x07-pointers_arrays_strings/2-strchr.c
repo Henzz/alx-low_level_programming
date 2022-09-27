@@ -20,6 +20,5 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
-	s = NULL;
-	return (s);
+	return (NULL);
 }
