@@ -22,7 +22,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 {
 	int i, sum = 0;
 
-	if (argc > 2)
+	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
