@@ -9,6 +9,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
 
 /**
  * main - prints the number of arguments passed
@@ -19,7 +20,7 @@
  */
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	if (argc > 1 && argc < 3)
+	if (argc > 2)
 	{
 		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 		return (0);
