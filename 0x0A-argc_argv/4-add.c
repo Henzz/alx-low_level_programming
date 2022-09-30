@@ -33,7 +33,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 				printf("Error\n");
 				return (1);
 			}
-			else
+			else if (atoi(argv[i]))
 			{
 				sum += atoi(argv[i]);
 			}
