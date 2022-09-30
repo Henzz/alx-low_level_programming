@@ -1,12 +1,3 @@
-#ifdef UNUSED
-#elif defined(__GNUC__)
-# define UNUSED(x) { UNUSED_ ## x __attribute__((unused)) }
-#elif defined(__LCLINT__)
-# define UNUSED(x) /*@unused@*/ x
-#else
-# define UNUSED(x) x
-#endif
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
@@ -18,7 +9,7 @@
  *
  * Return: Always 0(Success).
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 {
 	int i, sum = 0;
 
