@@ -8,7 +8,7 @@
  */
 int is_prime_number(int n)
 {
-	if (n == 0 || n == 1)
+	if (n == 0 || n == 1 || n == -1)
 	{
 		return (0);
 	}
@@ -16,9 +16,13 @@ int is_prime_number(int n)
 	{
 		return (1);
 	}
-	if (n % (n / 2) == 0)
+	if (n % 2 == 0 || n % 3 == 0 || n % 5 == 0)
 	{
 		return (0);
+	}
+	if (n % 2 != 0)
+	{
+		return (1);
 	}
 	return (is_prime_number(n / 2));
 }
