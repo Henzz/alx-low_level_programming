@@ -1,6 +1,6 @@
 #ifdef UNUSED
 #elif defined(__GNUC__)
-# define UNUSED(x) { UNUSED_ ## x __attribute__((unused)) }
+# define UNUSED(x) UNUSED_ ## x __attribute__((unused))
 #elif defined(__LCLINT__)
 # define UNUSED(x) /*@unused@*/ x
 #else
@@ -9,16 +9,17 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 /**
- * main - prints the function name
+ * main - prints the number of arguments passed
  * @argc: number of arguments
  * @argv: strings of the arguments
  *
  * Return: Always 0(Success).
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
-	printf("%s\n", argv[0]);
+	printf("%d\n", argc);
 	return (0);
 }
