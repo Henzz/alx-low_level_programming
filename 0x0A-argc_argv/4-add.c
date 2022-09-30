@@ -26,14 +26,16 @@ int main(int argc __attribute__((unused)), char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (atoi(argv[i]) != 0)
-			{
-				sum += atoi(argv[i]);
-			}
-			else
+			if ((*argv[i] >= 'a' && *argv[i] <= 'z')
+					||
+					(*argv[i] >= 'A' && *argv[i] <= 'Z'))
 			{
 				printf("Error\n");
 				return (1);
+			}
+			else
+			{
+				sum += atoi(argv[i]);
 			}
 		}
 		printf("%d\n", sum);
