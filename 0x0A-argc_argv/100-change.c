@@ -17,11 +17,11 @@ int main(int argc, char *argv[])
 		{
 			printf("0\n");
 		}
-		if (atoi(argv[1]) / 25)
+		if (atoi(argv[1]) / 25 && ((atoi(argv[1]) / 25) * 25 == argv[1]))
 		{
 			printf("%d\n", atoi(argv[1]) / 25);
 		}
-		else if (atoi(argv[1]) / 10)
+		else if ((atoi(argv[1]) / 10) * 10 == argv[1])
 		{
 			printf("%d\n", atoi(argv[1]) / 10);
 		}

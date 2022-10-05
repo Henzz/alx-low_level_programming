@@ -1,6 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
+
+int num_checker(char *a);
 
 /**
  * main - prints the number of arguments passed
@@ -11,35 +14,43 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int i, j, sum = 0;
 
-	if (argc > 1)
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		j = num_checker(argv[i]);
+		if (j == -1)
 		{
-			if ((*argv[i] >= 'a' && *argv[i] <= 'z')
-					||
-					(*argv[i] >= 'A' && *argv[i] <= 'Z'))
-			{
-				printf("Error\n");
-				return (1);
-			}
-			else if (atoi(argv[i]))
-			{
-				sum += atoi(argv[i]);
-			}
-			else if (!atoi(argv[i]))
-			{
-				printf("Error\n");
-				return (1);
-			}
+			printf("Error\n");
+			return (1);
 		}
-		printf("%d\n", sum);
-		return (0);
+		sum += j;
 	}
-	else
+	printf("%d\n", sum);
+	return (0);
+}
+
+/**
+ * num_checker - checks if a given char is number or not
+ * @a: char to be checked
+ *
+ * Return: 1, if its a number, else 0
+ */
+int num_checker(char *a)
+{
+	int i = 0, num = 0, len = strlen(a);
+
+	while (i < len)
 	{
-		printf("0\n");
-		return (0);
+		if (a[i] < '0' || a[i] > '9')
+		{
+			return (-1);
+		}
+		else
+		{
+			num = num * 10 + (a[i] - '0');
+		}
+		i++;
 	}
+	return (num);
 }
