@@ -9,7 +9,7 @@ int main(void)
 {
 	char *s;
 
-	s = str_concat("Betty ", NULL);
+	s = str_concat(NULL, "Hello");
 	if (s == NULL)
 	{
 		printf("failed\n");

@@ -15,7 +15,7 @@ char *str_concat(char *s1, char *s2)
 	lengthS1 = s1 ? strlen(s1) : 1;
 	lengthS2 = s2 ? strlen(s2) : 1;
 	sum = lengthS1 + lengthS2;
-	s = malloc((sum + 1) * sizeof(char));
+	s = malloc(2*(sum + 1) * sizeof(char));
 	if (s == NULL)
 	{
 		return (NULL);
@@ -34,6 +34,7 @@ char *str_concat(char *s1, char *s2)
 	j = 0;
 	while (j < lengthS2)
 	{
+		printf("s: %p\n", s);
 		if (s2 == NULL)
 		{
 			s[i] = '\0';
