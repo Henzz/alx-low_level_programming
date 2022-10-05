@@ -12,36 +12,36 @@ char *str_concat(char *s1, char *s2)
 	char *s;
 	int lengthS1, lengthS2, sum, i, j;
 
-	lengthS1 = strlen(s1);
-	lengthS2 = strlen(s2);
+	if (s1 == NULL)
+	{
+		lengthS1 = 1;
+	}
+	else
+	{
+		lengthS1 = strlen(s1);
+	}
+	if (s2 == NULL)
+	{
+		lengthS2 = 1;
+	}
+	else
+	{
+		lengthS2 = strlen(s2);
+	}
 	sum = lengthS1 + lengthS2;
-	s = malloc(sum * sizeof(char));
+	s = malloc((sum + 1) * sizeof(char));
 	if (s == NULL)
 	{
 		return (NULL);
 	}
 	for (i = 0; i < lengthS1; i++)
 	{
-		if (s1 == NULL)
-		{
-			s[i] = ' ';
-		}
-		else
-		{
-			s[i] = s1[i];
-		}
+		s[i] = s1[i];
 	}
 	j = 0;
 	while (j < lengthS2)
 	{
-		if (s2 == NULL)
-		{
-			s[i] = ' ';
-		}
-		else
-		{
-			s[i] = s2[j];
-		}
+		s[i] = s2[j];
 		i++;
 		j++;
 	}
