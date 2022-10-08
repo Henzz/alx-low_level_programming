@@ -9,12 +9,12 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int i, elements = nmemb, typesize = size;
+	int i, elements = nmemb;
 	char *space;
 
-	if (elements == 0 || typesize == 0)
+	if (elements == 0 || size == 0)
 		return (NULL);
-	space = malloc((elements + 1) * typesize);
+	space = malloc((elements) * size);
 	if (space == NULL)
 		return (NULL);
 	for (i = 0; i < elements + 1; i++)
