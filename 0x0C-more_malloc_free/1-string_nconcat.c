@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n < count2)
 		count2 = n;
-	ptr = malloc((count1 + count2) * sizeof(char));
+	ptr = malloc((count1 + count2));
 	if (ptr == NULL)
 	{
 		return (NULL);
