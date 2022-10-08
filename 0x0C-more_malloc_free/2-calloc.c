@@ -17,7 +17,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	space = malloc((elements + 1) * typesize);
 	if (space == NULL)
 		return (NULL);
-	for (i = 0; i < elements; i++)
+	for (i = 0; i < elements + 1; i++)
 	{
 		space[i] = 0;
 	}
