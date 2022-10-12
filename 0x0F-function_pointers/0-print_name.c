@@ -1,3 +1,5 @@
+#include "function_poiners.h"
+
 /**
  * print_name - a function that prints a name
  * @name: name to be printed
