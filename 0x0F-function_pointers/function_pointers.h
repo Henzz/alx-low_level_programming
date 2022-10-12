@@ -1,6 +1,12 @@
 #ifndef FUNCTION_POINTERS_H
 #define FUNCTION_POINTERS_H
 
+/*
+ * File: function_pointers.h
+ * Desc: Header file containing prototypes for pointer
+ *       functions.
+ */
+
 #include <stdlib.h>
 
 int _putchar(char a);
