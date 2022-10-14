@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <udis86.h>
 
 /**
  * main - prints the opcodes of its own main function
  * @argc: number of arguments
  * @argv: list of arguments passed
  *
- * Return: nothing.
+ * Return: Always 0.
  */
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int nbyte;
-	ud_t ud_obj;
+	int nbyte, i = 0;
+	int (*address)(int, char **) = main;
+	unsigned char code;
 
 	if (argc != 2)
 	{
@@ -25,12 +25,15 @@ void main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	ud_init(&ud_obj);
-	ud_set_input_file(&ud_obj, stdin);
-	ud_set_mode(&ud_obj, nbyte);
-	ud_set_syntax(&ud_obj, UD_SYN_INTEL);i
-	while (ud_disassemble(&ud_obj))
+	for (i = 0; i < nbyte; i++)
 	{
-		printf("\t%d\n", ud_insn_asm(&ud_obj));
+		code = *(unsigned char *)address;
+		printf("%.2x", code);
+		if (i == nbyte - 1)
+			continue;
+		printf(" ");
+		address++;
 	}
+	printf("\n");
+	return (0);
 }
