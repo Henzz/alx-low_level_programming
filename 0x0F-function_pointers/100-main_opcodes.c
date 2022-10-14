@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <udis86.h>
 
 /**
  * main - prints the opcodes of its own main function
@@ -11,6 +12,7 @@
 void main(int argc, char *argv[])
 {
 	int nbyte;
+	ud_t ud_obj;
 
 	if (argc != 2)
 	{
@@ -23,5 +25,12 @@ void main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	printf("co\n"); 
+	ud_init(&ud_obj);
+	ud_set_input_file(&ud_obj, stdin);
+	ud_set_mode(&ud_obj, nbyte);
+	ud_set_syntax(&ud_obj, UD_SYN_INTEL);i
+	while (ud_disassemble(&ud_obj))
+	{
+		printf("\t%d\n", ud_insn_asm(&ud_obj));
+	}
 }

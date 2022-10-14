@@ -6,7 +6,7 @@
  * @argc: number of arguments
  * @argv: strings of argumnets
  *
- * Return: nothing.
+ * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
@@ -37,5 +37,5 @@ int main(int argc, char *argv[])
 	}
 	calc = get_op_func(operator)(num1, num2);
 	printf("%d\n", calc);
-	return (calc);
+	return (0);
 }
