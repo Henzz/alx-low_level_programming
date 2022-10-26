@@ -4,7 +4,7 @@
  * insert_nodeint_at_index - inserts new node at the nith node
  * of a listint_t linked list
  * @head: pointer to head of a linked list
- * @index: index of a linked list
+ * @idx: index of a linked list
  * @n: int value to be inserted
  *
  * Return: the address of the new node.
