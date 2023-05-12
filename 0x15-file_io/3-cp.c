@@ -40,7 +40,6 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
-		return (0);
 	file_from = open(av[1], O_RDONLY);
 	r = read(file_from, buffer, 1024);
 	file_to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
