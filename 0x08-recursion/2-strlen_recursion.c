@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * _strlen_recursion - counts the number of characters in a string
  * @s: the string to be counted

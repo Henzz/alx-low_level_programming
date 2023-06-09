@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * _print_rev_recursion - prints a string using recursion in reverse order
  * @s: the string to be printed
