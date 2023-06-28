@@ -5,6 +5,12 @@
 
 int sum_them_all(const unsigned int n, ...);
 
+/**
+ * struct printer - symbol and function pointer
+ * @symbol: first argument for data type to use
+ * @print: second argumnet for a function
+ *
+ */
 typedef struct printer
 {
 	char *symbol;
