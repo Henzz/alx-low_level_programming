@@ -89,7 +89,6 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(args, format);
-
 	while (format && (*(format + i)))
 	{
 		j = 0;
@@ -103,10 +102,8 @@ void print_all(const char * const format, ...)
 			funcs[j].print(args);
 			separator = ", ";
 		}
-
 		i++;
 	}
-
 	printf("\n");
 
 	va_end(args);
