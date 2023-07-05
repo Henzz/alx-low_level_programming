@@ -17,5 +17,7 @@ typedef struct listint_s
 
 /* prints all the elements of a linked list */
 size_t print_listint(const listint_t *h);
+/* returns the number os elements in a singly linked lists */
+size_t listint_len(const listint_t *h);
 
 #endif /* LISTS_H */
