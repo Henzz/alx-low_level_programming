@@ -2,7 +2,7 @@
 
 /**
  * rot13 - encodes a string using rot13
- * @ch: character to be rotated
+ * @str: character to be rotated
  *
  * Return: encoded string.
  */
@@ -43,4 +43,4 @@ char *rot13(char *str)
 	}
 
 	return (str);
-}	
+}
