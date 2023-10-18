@@ -6,35 +6,41 @@
  *
  * Return: encoded string.
  */
-char *rot13(char *ch)
+char *rot13(char *str)
 {
-	int length, i;
+	int indx1 = 0, indx2;
+	char alphabet[52] = {'A', 'B', 'C', 'D', 'E', 'F',
+			     'G', 'H', 'I', 'J', 'K', 'L',
+			     'M', 'N', 'O', 'P', 'Q', 'R',
+			     'S', 'T', 'U', 'V', 'W', 'X',
+			     'Y', 'Z', 'a', 'b', 'c', 'd',
+			     'e', 'f', 'g', 'h', 'i', 'j',
+			     'k', 'l', 'm', 'n', 'o', 'p',
+			     'q', 'r', 's', 't', 'u', 'v',
+			     'w', 'x', 'y', 'z'};
+	char rot13key[52] = {'N', 'O', 'P', 'Q', 'R', 'S',
+			     'T', 'U', 'V', 'W', 'X', 'Y',
+			     'Z', 'A', 'B', 'C', 'D', 'E',
+			     'F', 'G', 'H', 'I', 'J', 'K',
+			     'L', 'M', 'n', 'o', 'p', 'q',
+			     'r', 's', 't', 'u', 'v', 'w',
+			     'x', 'y', 'z', 'a', 'b', 'c',
+			     'd', 'e', 'f', 'g', 'h', 'i',
+			     'j', 'k', 'l', 'm'};
 
-	length = strlen(ch);
-	for (i = 0; i < length; i++)
+	while (str[indx1])
 	{
-		if (ch[i] >= 'A' && ch[i] <= 'Z')
+		for (indx2 = 0; indx2 < 52; indx2++)
 		{
-			if (ch[i] + 13 <= 'Z')
+			if (str[indx1] == alphabet[indx2])
 			{
-				ch[i] = ch[i] + 13;
-			}
-			else
-			{
-				ch[i] = ch[i] - 13;
+				str[indx1] = rot13key[indx2];
+				break;
 			}
 		}
-		else if (ch[i] >= 'a' && ch[i] <= 'z')
-		{
-			if (ch[i] + 13 <= 'z')
-			{
-				ch[i] = ch[i] + 13;
-			}
-			else
-			{
-				ch[i] = ch[i] - 13;
-			}
-		}
+
+		indx1++;
 	}
-	return (ch);
-}
+
+	return (str);
+}	
