@@ -8,24 +8,15 @@
 size_t print_listint(const listint_t *h)
 {
 	size_t nodes = 0;
-	listint_t *head;
 
 	/* if passed argument h is null */
 	if (h == NULL)
 		return (0);
 
-	head = malloc(sizeof(listint_t));
-	if (head == NULL)
+	while (h != NULL)
 	{
-		printf("Error\n");
-		return (0);
-	}
-	head->n = h->n;
-	head->next = h->next;
-	while (head != NULL)
-	{
-		printf("%d\n", head->n);
-		head = head->next;
+		printf("%d\n", h->n);
+		h = h->next;
 		nodes++;
 	}
 
