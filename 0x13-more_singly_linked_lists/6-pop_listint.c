@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
 /**
- * pop_listint - deletes the head node of a list_t list
- * @head: a pointer to the head list_t list.
+ * pop_listint - deletes the head node of a linked list.
+ * @head: the pointer to the head of a linked list.
  *
- * Return: the head node's data(n).
+ * Return: if success the head node's data(n),
+ * if failure 0.
  */
 int pop_listint(listint_t **head)
 {
