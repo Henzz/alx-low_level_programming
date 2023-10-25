@@ -40,5 +40,7 @@ int sum_listint(listint_t *head);
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 /* deletes the node at given index of a linked list */
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
+/* reverses a linked list */
+listint_t *reverse_listint(listint_t **head);
 
 #endif /* LISTS_H */
