@@ -1,5 +1,3 @@
-#include <stddef.h>
-#include <stdio.h>
 /**
  * get_bit - gets the value of a bit at given index.
  * @n: the number to get the bit.
