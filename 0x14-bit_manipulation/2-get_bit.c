@@ -13,8 +13,12 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int shifted;
 	int bitValue;
 
+	if (index >= (sizeof(unsigned long int) * 8))
+		return (-1);
+
 	/* shift the number to the right side by the index */
 	shifted = n >> index;
+	/* extract the least significant bit (LSB) */
 	bitValue = shifted & 1;
 	return (bitValue);
 }
