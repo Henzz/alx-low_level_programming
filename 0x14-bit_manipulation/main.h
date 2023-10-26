@@ -8,5 +8,7 @@ int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
 /* prints the binary represenation of a number */
 void print_binary(unsigned long int n);
+/* gets the value of a bit at a given index */
+int get_bit(unsigned long int n, unsigned int index);
 
 #endif /* MAIN_H */
