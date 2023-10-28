@@ -16,5 +16,7 @@ int set_bit(unsigned long int *n, unsigned int index);
 int clear_bit(unsigned long int *n, unsigned int index);
 /* gets the number of bits it would need to flip to get from one number to another */
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
+/* checks the endianness */
+int get_endianness(void);
 
 #endif /* MAIN_H */
