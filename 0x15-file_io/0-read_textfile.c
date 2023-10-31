@@ -21,9 +21,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	readfd = read(fd, buffer, letters);
 	writefd = write(STDOUT_FILENO, buffer, readfd);
-	if (fd == -1 || readfd == -1 || writefd == -1 || writefd != readfd)
-		return (0);
-
+	do {
+		if (fd == -1 || readfd == -1 || writefd == -1 || writefd != readfd)
+			return (0);
+		readfd = read(fd, buffer, letters);
+		writefd = write(1, buffer, readfd);
+	} while (readfd > 0);
 	close(fd);
 	return (writefd);
 }
