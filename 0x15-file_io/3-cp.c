@@ -5,17 +5,17 @@
 
 /* Buffer size */
 #define BUFFER_SIZE 1024
+void close_fd(ssize_t fd);
 
 /**
  * close_fd - closes a file descriptor
  * @fd: file descriptor.
- * @filename: pointer to the filename.
  */
-void close_fd(ssize_t fd, const char *filename)
+void close_fd(ssize_t fd)
 {
 	if (close(fd) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %s\n", filename);
+		dprintf(2, "Error: Can't close fd %ld\n", fd);
 		exit(100);
 	}
 }
@@ -58,8 +58,7 @@ int main(int ac, char **av)
 		readfd_from = read(fd_from, buffer, BUFFER_SIZE);
 		fd_to = open(f_to, O_WRONLY | O_APPEND);
 	} while (readfd_from > 0);
-
-	close_fd(fd_from, f_from);
-	close_fd(fd_to, f_to);
-	return (1);
+	close_fd(fd_from);
+	close_fd(fd_to);
+	return (0);
 }
