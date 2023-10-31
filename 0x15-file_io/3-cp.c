@@ -30,7 +30,6 @@ void close_fd(ssize_t fd)
 int main(int ac, char **av)
 {
 	char buffer[BUFFER_SIZE];
-	char *f_from, *f_to;
 	ssize_t fd_from, readfd_from, fd_to, writefd_to;
 
 	if (ac != 3)
@@ -38,25 +37,23 @@ int main(int ac, char **av)
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	f_from = av[1];
-	f_to = av[2];
-	fd_from = open(f_from, O_RDONLY);
+	fd_from = open(av[1], O_RDONLY);
 	readfd_from = read(fd_from, buffer, BUFFER_SIZE);
-	fd_to = open(f_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fd_to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	do {
 		if (fd_from == -1 || readfd_from == -1)
 		{
-			dprintf(2, "Error: Can't read from file %s\n", f_from);
+			dprintf(2, "Error: Can't read from file %s\n", av[1]);
 			exit(98);
 		}
 		writefd_to = write(fd_to, buffer, readfd_from);
 		if (fd_to == -1 || writefd_to == -1)
 		{
-			dprintf(2, "Error: Can't write to %s\n", f_to);
+			dprintf(2, "Error: Can't write to %s\n", av[2]);
 			exit(99);
 		}
 		readfd_from = read(fd_from, buffer, BUFFER_SIZE);
-		fd_to = open(f_to, O_WRONLY | O_APPEND);
+		fd_to = open(av[2], O_WRONLY | O_APPEND);
 	} while (readfd_from > 0);
 	close_fd(fd_from);
 	close_fd(fd_to);
