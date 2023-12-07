@@ -3,23 +3,26 @@
 #include "lists.h"
 
 /**
- * print_dlistint - prints all elements of a dlistint_t list
- * @h: head of a linked list
- * Return: the number of nodes
+ * get_dnodeint_at_index - gets a node at nth index of a dlistint_t list
+ * @head: head of a linked list
+ * @index: index position to look for
+ * Return: the index of a dlistint_t list,
+ * else NULL
  */
-size_t print_dlistint(const dlistint_t *h)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	size_t i = 0;
-	const dlistint_t *temp = h;
+	unsigned int i = 0;
+	dlistint_t *temp = head;
 
-	if (h == NULL)
-		return (0);
+	if (head == NULL)
+		return (NULL);
 
-	while (temp != NULL)
+	while (temp != NULL && i != index)
 	{
 		i++;
-		printf("%d\n", temp->n);
 		temp = temp->next;
 	}
-	return (i);
+	if (i == index)
+		return (temp);
+	return (NULL);
 }
