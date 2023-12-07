@@ -28,5 +28,11 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 void free_dlistint(dlistint_t *head);
 /* Gets a node at nth index of a dlistint_t list */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
+/* Sums all the data (n) of a dlistint_t list */
+int sum_dlistint(dlistint_t *head);
+/* Inserts a new node at a given position in a dlistint_t list */
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
+/* Deletes the node at given index of a dlistint_t list */
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 
 #endif /* LISTS_H */
