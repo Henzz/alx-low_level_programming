@@ -1,0 +1,28 @@
+#include <stdlib.h>
+#include <string.h>
+#include "hash_tables.h"
+
+/**
+ * hash_table_get - searches for a key in a hash table.
+ * @ht: the hash table.
+ * @key: the key to search in the hash table.
+ *
+ * Return: the value associated with the key,
+ * or NULL if key could not be found.
+ */
+char *hash_table_get(const hash_table_t *ht, const char *key)
+{
+	int index;
+	hash_node_t *item;
+
+	index = key_index((const unsigned char *)key, ht->size);
+	item = (hash_node_t *)ht->array[index];
+
+	if (item != NULL)
+	{
+		if (strcmp(item->key, key) == 0)
+			return (item->value);
+	}
+
+	return (NULL);
+}
