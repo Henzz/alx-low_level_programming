@@ -3,10 +3,10 @@
 #include "hash_tables.h"
 
 /**
- * free_item - frees a hash node in a hash table.
+ * free_node - frees a hash node in a hash table.
  * @item: the hash node.
  */
-void free_item(hash_node_t *item)
+void free_node(hash_node_t *item)
 {
 	free(item->key);
 	free(item->value);
@@ -68,7 +68,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->next = NULL;
 	if (new_node->key == NULL || (new_node->value == NULL && value != NULL))
 	{
-		free_item(new_node);
+		free_node(new_node);
 		return (0);
 	}
 	if (ht->array[index] == NULL)
@@ -82,7 +82,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		j = update_node(ht->array[index], key, value);
 		if (j == 1)
 		{
-			free_item(new_node);
+			free_node(new_node);
 			return (1);
 		}
 
