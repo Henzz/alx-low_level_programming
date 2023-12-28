@@ -3,45 +3,6 @@
 #include "hash_tables.h"
 
 /**
- * free_node - frees a hash node in a hash table.
- * @item: the hash node.
- */
-void free_node(hash_node_t *item)
-{
-	free(item->key);
-	free(item->value);
-	free(item->next);
-	free(item);
-}
-
-/**
- * update_node - updates the value of a node from a hash table
- * with given key associated value.
- * @item: the node.
- * @key: the key to update.
- * @value: the new value.
- * Return: 1 on success update, otherwise 0.
- */
-int update_node(hash_node_t *item, const char *key, const char *value)
-{
-	hash_node_t *node;
-
-	node = item;
-	while (node != NULL)
-	{
-		if (strcmp(node->key, key) == 0)
-		{
-			free(node->value);
-			node->value = strdup(value);
-			return (1);
-		}
-		node = node->next;
-	}
-
-	return (0);
-}
-
-/**
  * create_node - creates a new node.
  * @key: the new key.
  * @value: the new value.
