@@ -10,11 +10,13 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *current;
 	int i, first = 1;
 
+	if (ht == NULL)
+		return;
+
 	printf("{");
 	for (i = 0; i < (int)ht->size; i++)
 	{
 		current = ht->array[i];
-
 		while (current != NULL)
 		{
 			if (!first)
