@@ -1,10 +1,9 @@
-.PHONY = all clean
+.PHONY = all
 
 CC = gcc  # compiler to use
-
 SRCS := $(wildcard *.c)
 
 all: school
 
-school:
-	${CC} $< -o $@ $^
+school: $(SRC)
+	${CC} -o $@ $^
