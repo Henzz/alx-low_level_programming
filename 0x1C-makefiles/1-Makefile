@@ -3,9 +3,8 @@
 CC = gcc  # compiler to use
 
 SRCS := $(wildcard *.c)
-BINS := $(SRCS:%.c=%)
 
 all: school
 
 school:
-	${CC} $< -o $@
+	${CC} $< -o $@ $^
