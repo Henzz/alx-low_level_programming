@@ -1,7 +1,7 @@
 .PHONY = all
 
 CC = gcc  # compiler to use
-SRCS := $(wildcard *.c)
+SRC := $(wildcard *.c)
 
 all: school
 
