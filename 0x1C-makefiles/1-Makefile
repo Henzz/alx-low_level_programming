@@ -4,7 +4,7 @@
 CC := gcc
 
 # Source files
-SRC := $(wildcard *.c)
+SRC := main.c school.c
 
 # Default target
 all: school
