@@ -1,9 +1,13 @@
-.PHONY = all
+.PHONY: all
 
-CC = gcc  # compiler to use
+# Compiler
+CC := gcc
+
+# Source files
 SRC := $(wildcard *.c)
 
+# Default target
 all: school
 
 school: $(SRC)
-	${CC} -o $@ $^
+	${CC} $^ -o $@
