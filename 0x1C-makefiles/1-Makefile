@@ -10,4 +10,4 @@ SRC := $(wildcard *.c)
 all: school
 
 school: $(SRC)
-	${CC} $^ -o $@
+	$(CC) $^ -o $@
