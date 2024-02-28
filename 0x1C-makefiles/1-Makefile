@@ -1,7 +1,7 @@
 .PHONY: all
 
 # Compiler
-CC := gcc
+CC = gcc
 
 # Source files
 SRC := main.c school.c
