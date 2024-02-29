@@ -1,0 +1,46 @@
+.PHONY: all clean oclean fclean re
+
+# Compiler
+CC = gcc
+
+# Compiler flags
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+# Source files
+SRC = main.c school.c
+
+# Object files
+OBJ = $(SRC:.c=.o)
+
+# Name of the executable
+NAME = school
+
+# Program to delete files
+RM = rm -rf
+
+# Default target
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) $^ -o $@
+
+# Rule to clean Emacs and Vim temporary files, along with the executable
+clean:
+	$(RM) *~ $(NAME)
+
+# Rule to delete object files
+oclean:
+	$(RM) $(OBJ)
+
+# Rule to clean Emacs and Vim temporary files, executable and object files
+fclean: clean oclean
+
+# Rule to force recompilaction of all source files
+re: fclean all
+
+# Check if m.h header file exists
+$(OBJ): m.h
+
+# Rule to compile .c files into .0 files
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
